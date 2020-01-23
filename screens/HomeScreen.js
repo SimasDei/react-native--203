@@ -1,9 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 
 export default function HomeScreen({ navigation }) {
-  const onPressHandler = () => {
+  const onPressOpacityHandler = () => {
     navigation.navigate('List');
+  };
+
+  const onPressBtnHandler = () => {
+    navigation.navigate('Image');
   };
 
   return (
@@ -11,7 +15,8 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.contentContainer}>
         <Text style={styles.getStartedText}>Ahoy Sailor o/ ⛵</Text>
       </View>
-      <TouchableOpacity style={styles.btn} onPress={onPressHandler}>
+      <Button title={'Go to Image 👉'} onPress={onPressBtnHandler} />
+      <TouchableOpacity style={styles.btn} onPress={onPressOpacityHandler}>
         <Text>Go to list 👉</Text>
       </TouchableOpacity>
     </View>

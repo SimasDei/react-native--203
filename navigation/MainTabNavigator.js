@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import ComponentScreen from '../screens/ComponentScreen';
 import ListScreen from '../screens/ListScreen';
+import { ImageScreen } from '../screens/';
 
 const HomeStack = createStackNavigator({
   Home: {
@@ -13,6 +14,10 @@ const HomeStack = createStackNavigator({
   Components: {
     screen: ComponentScreen,
     navigationOptions: { headerTitle: 'Component' },
+  },
+  Image: {
+    screen: ImageScreen,
+    navigationOptions: { headerTitle: 'Image' },
   },
 });
 
